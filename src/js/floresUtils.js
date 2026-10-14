@@ -30,7 +30,7 @@ export function validarCorreo(correo) {
   const dominiosPermitidos = ['@gmail.com', '@duocuc.cl', '@profesor.cl'];
   return dominiosPermitidos.some((dom) => limpio.endsWith(dom));
 }
-//recibe loista de productos del carro y calcula monto
+//recibe lista de productos del carro y calcula monto
 export function calcularResumenCarrito(items = [], porcentajeDescuento = 0, costoComuna = 3990) {
   const subtotal = items.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
   const totalConDescuento = aplicarDescuento(subtotal, porcentajeDescuento);

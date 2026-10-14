@@ -11,7 +11,7 @@ export default function Footer({ setPaginaActual }) {
               <i className="bi bi-flower1 text-danger me-2"></i>FloresYa
             </h3>
             <p className="small text-secondary">
-              FloristerÃ­a boutique online en Santiago. Flores frescas cosechadas diariamente con despacho garantizado.
+              Floristería boutique online en Santiago. Flores frescas cosechadas diariamente con despacho garantizado.
             </p>
             <div className="d-flex gap-3 fs-5 mt-3 text-secondary">
               <i className="bi bi-instagram"></i>
@@ -24,8 +24,8 @@ export default function Footer({ setPaginaActual }) {
             <h6 className="text-white fw-bold mb-3">Secciones</h6>
             <ul className="list-unstyled small d-flex flex-column gap-2">
               <li><a href="#inicio" onClick={(e) => { e.preventDefault(); setPaginaActual('inicio'); }}>Inicio</a></li>
-              <li><a href="#catalogo" onClick={(e) => { e.preventDefault(); setPaginaActual('catalogo'); }}>CatÃ¡logo</a></li>
-              <li><a href="#personalizar" onClick={(e) => { e.preventDefault(); setPaginaActual('personalizar'); }}>DiseÃ±ar Ramo</a></li>
+              <li><a href="#catalogo" onClick={(e) => { e.preventDefault(); setPaginaActual('catalogo'); }}>Catálogo</a></li>
+              <li><a href="#personalizar" onClick={(e) => { e.preventDefault(); setPaginaActual('personalizar'); }}>Diseñar Ramo</a></li>
               <li><a href="#mis-pedidos" onClick={(e) => { e.preventDefault(); setPaginaActual('mis-pedidos'); }}>Mis Pedidos</a></li>
               <li><a href="#contacto" onClick={(e) => { e.preventDefault(); setPaginaActual('contacto'); }}>Contacto</a></li>
             </ul>

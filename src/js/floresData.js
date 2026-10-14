@@ -79,7 +79,6 @@ export const floresIniciales = [
   cuidados: "Base de esponja floral húmeda incluida."
 },
 
-  // ── 6 Flores individuales ────────────────────────────────────────────────
   {
     id: 7,
     codigo: "FLOR-007",
@@ -159,7 +158,6 @@ export const floresIniciales = [
     cuidados: "Retirar los estambres amarillos para evitar manchas. Agua limpia cada 2 días."
   },
 
-  // ── 6 Ramos Mixtos ───────────────────────────────────────────────────────
   {
     id: 13,
     codigo: "FLOR-013",
