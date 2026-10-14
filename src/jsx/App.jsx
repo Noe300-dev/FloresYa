@@ -26,20 +26,30 @@ export default function App() {
     if (!s) return floresIniciales;
     try {
       const guardados = JSON.parse(s);
-      return guardados.map((g) => {
+      // Actualizar productos existentes y agregar los nuevos que aún no estén guardados
+      const actualizados = guardados.map((g) => {
         const inicial = floresIniciales.find((fi) => fi.id === g.id || fi.codigo === g.codigo);
         return inicial ? { ...g, imagen: inicial.imagen, nombre: inicial.nombre } : g;
       });
+      const nuevos = floresIniciales.filter(
+        (fi) => !guardados.some((g) => g.id === fi.id || g.codigo === fi.codigo)
+      );
+      return [...actualizados, ...nuevos];
     } catch (e) {
       return floresIniciales;
     }
+
   });
 
   const [usuarios, setUsuarios] = useState(() => {
     const s = localStorage.getItem('floresya_usuarios');
     if (!s) return usuariosIniciales;
     try {
-      const guardados = JSON.parse(s);
+      // Eliminar usuario profesor@duocuc.cl si existe en el storage
+      const CORREOS_BLOQUEADOS = ['profesor@duocuc.cl'];
+      const guardados = JSON.parse(s).filter(
+        (u) => !CORREOS_BLOQUEADOS.includes(u.correo.toLowerCase())
+      );
       const combinados = [...guardados];
       usuariosIniciales.forEach((def) => {
         const idx = combinados.findIndex((u) => u.correo.toLowerCase() === def.correo.toLowerCase());
