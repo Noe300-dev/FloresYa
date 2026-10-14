@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import DetalleModal from './DetalleModal';
-import Carrito from './CArrito';
+import Carrito from './Carrito';
 import AuthModal from './AuthModal';
 
 import Home from './Home';
@@ -15,7 +15,6 @@ import Contacto from './Contacto';
 import AdminDashboard from './AdminDashboard';
 
 import { floresIniciales, blogInicial, usuariosIniciales } from '../js/floresData';
-
 export default function App() {
   const [paginaActual, setPaginaActual] = useState('inicio');
 

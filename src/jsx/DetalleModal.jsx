@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatearPrecio } from './js/floresUtils';
+import { formatearPrecio } from '../js/floresUtils';
 
 export default function DetalleModal({ flor, onClose, onAgregarAlCarrito }) {
   if (!flor) return null;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { formatearPrecio } from './js/floresUtils';
-import './css/Admin.css';
+import { formatearPrecio } from '../js/floresUtils';
+import '../css/Admin.css';
 
 export default function AdminDashboard({
   flores,

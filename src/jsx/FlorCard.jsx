@@ -1,7 +1,7 @@
 import React from 'react';
-import { formatearPrecio } from './js/floresUtils';
-import { useContador } from './js/useContador';
-import './css/FlorCard.css';
+import { formatearPrecio } from '../js/floresUtils';
+import { useContador } from '../js/useContador';
+import '../css/FlorCard.css';
 
 export default function FlorCard({ flor, onAgregarAlCarrito, onVerDetalle }) {
   const { valor: cantidad, incrementar, decrementar } = useContador({

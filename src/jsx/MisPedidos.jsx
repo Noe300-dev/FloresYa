@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatearPrecio } from './js/floresUtils';
+import { formatearPrecio } from '../js/floresUtils';
 
 export default function MisPedidos({ pedidos, setPaginaActual }) {
   return (

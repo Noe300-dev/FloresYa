@@ -148,7 +148,7 @@ export default function Contacto() {
             <h5 className="fw-bold font-serif mb-4">Información de la Tienda</h5>
             <p className="small mb-2"><i className="bi bi-geo-alt text-danger me-2"></i> Av. Providencia 1234, Santiago</p>
             <p className="small mb-2"><i className="bi bi-telephone text-success me-2"></i> +56 9 8765 4321</p>
-            <p className="small mb-4"><i className="bi bi-envelope text-primary me-2"></i>admin@floresya@gmail.com</p>
+            <p className="small mb-4"><i className="bi bi-envelope text-primary me-2"></i>admin.floresya@gmail.com</p>
 
             <h6 className="fw-bold mb-2">Preguntas Frecuentes</h6>
             <div className="accordion accordion-flush" id="faqContacto">

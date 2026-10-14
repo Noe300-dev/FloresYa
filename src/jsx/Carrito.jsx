@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { formatearPrecio, calcularResumenCarrito } from './js/floresUtils';
-import { comunasSantiago } from './js/floresData';
-import './css/Carrito.css';
+import { formatearPrecio, calcularResumenCarrito } from '../js/floresUtils';
+import { comunasSantiago } from '../js/floresData';
+import '../css/Carrito.css';
 
 export default function Carrito({
   carrito,

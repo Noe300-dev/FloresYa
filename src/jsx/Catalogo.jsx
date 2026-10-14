@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import FlorCard from './FlorCard';
-import './css/Catalogo.css';
+import '../css/Catalogo.css';
 
 export default function Catalogo({ flores, onAgregarAlCarrito, onVerDetalle }) {
   const [categoria, setCategoria] = useState('Todas');

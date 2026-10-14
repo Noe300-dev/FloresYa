@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { validarCorreo } from './js/floresUtils';
-import './css/Auth.css';
+import { validarCorreo } from '../js/floresUtils';
+import '../css/Auth.css';
 
 export default function AuthModal({ isOpen, onClose, onLoginExitoso, usuarios, onRegistrarUsuario }) {
   const [modo, setModo] = useState('login');
@@ -65,7 +65,7 @@ export default function AuthModal({ isOpen, onClose, onLoginExitoso, usuarios, o
       nombre: nombre.trim(),
       correo: correoLimpio,
       telefono: telefono.trim(),
-      rol: correoLimpio === 'administrador@duocuc.cl' ? 'Administrador' : 'Cliente',
+      rol: correoLimpio === 'admin@gmail.com' ? 'Administrador' : 'Cliente',
       password
     };
 
@@ -104,7 +104,7 @@ export default function AuthModal({ isOpen, onClose, onLoginExitoso, usuarios, o
                     value={correo}
                     onChange={(e) => setCorreo(e.target.value)}
                   />
-                  <div className="form-text small">Admin demo: profesor@duocuc.cl / password123</div>
+                  <div className="form-text small">Admin demo: admin@gmail.com / 123456</div>
                 </div>
 
                 <div className="mb-3">

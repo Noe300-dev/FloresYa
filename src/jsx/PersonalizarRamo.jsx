@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { formatearPrecio } from './js/floresUtils';
-import './css/Personalizar.css';
+import { formatearPrecio } from '../js/floresUtils';
+import '../css/Personalizar.css';
 
 export default function PersonalizarRamo({ onAgregarAlCarrito }) {
   const [flor, setFlor] = useState('Rosas Rojas');
