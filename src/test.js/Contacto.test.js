@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Contacto from '../Contacto';
+import Contacto from '../jsx/Contacto';
 
 describe('Formulario de Contacto', () => {
   it('Bloquea el envio si el correo no es institucional o Gmail', async () => {

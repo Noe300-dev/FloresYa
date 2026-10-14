@@ -7,12 +7,14 @@ import AuthModal from './AuthModal';
 
 import Home from './Home';
 import Catalogo from './Catalogo';
+import Ofertas from './Ofertas';
 import PersonalizarRamo from './PersonalizarRamo';
 import MisPedidos from './MisPedidos';
 import Blog from './Blog';
 import Nosotros from './Nosotros';
 import Contacto from './Contacto';
 import AdminDashboard from './AdminDashboard';
+import ConfirmacionPago from './ConfirmacionPago';
 
 import { floresIniciales, blogInicial, usuariosIniciales } from '../js/floresData';
 export default function App() {
@@ -72,6 +74,7 @@ export default function App() {
   const [florDetalle, setFlorDetalle] = useState(null);
   const [carritoAbierto, setCarritoAbierto] = useState(false);
   const [authAbierto, setAuthAbierto] = useState(false);
+  const [ultimoPedido, setUltimoPedido] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('floresya_catalogo', JSON.stringify(flores));
@@ -140,9 +143,10 @@ export default function App() {
     );
 
     setPedidos((prev) => [nuevoPedido, ...prev]);
+    setUltimoPedido(nuevoPedido);
     vaciarCarrito();
-    alert(`¡Pedido ${nuevoPedido.id} generado exitosamente! Puedes revisarlo en la sección "Mis Pedidos".`);
-    setPaginaActual('mis-pedidos');
+    setCarritoAbierto(false);
+    setPaginaActual('confirmacion');
   };
 
   // Admin handlers
@@ -196,6 +200,22 @@ export default function App() {
             flores={flores}
             onAgregarAlCarrito={agregarAlCarrito}
             onVerDetalle={(f) => setFlorDetalle(f)}
+          />
+        )}
+
+        {paginaActual === 'ofertas' && (
+          <Ofertas
+            flores={flores}
+            onAgregarAlCarrito={agregarAlCarrito}
+            onVerDetalle={(f) => setFlorDetalle(f)}
+          />
+        )}
+
+        {paginaActual === 'confirmacion' && (
+          <ConfirmacionPago
+            pedido={ultimoPedido}
+            exito={!!ultimoPedido}
+            setPaginaActual={setPaginaActual}
           />
         )}
 

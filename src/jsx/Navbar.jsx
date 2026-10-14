@@ -40,6 +40,12 @@ export default function Navbar({
               Flores & Ramos
             </button>
             <button
+              onClick={() => setPaginaActual('ofertas')}
+              className={`nav-enlace ${paginaActual === 'ofertas' ? 'activo' : ''}`}
+            >
+              <i className="bi bi-tag-fill me-1 text-danger"></i>Ofertas
+            </button>
+            <button
               onClick={() => setPaginaActual('personalizar')}
               className={`nav-enlace ${paginaActual === 'personalizar' ? 'activo' : ''}`}
             >
